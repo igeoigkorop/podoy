@@ -114,14 +114,4 @@ jobs:
           --debug
       shell: bash
 
-    # ==================== UPLOAD ARTIFACTS ====================
-    - name: Upload screenshots & logs
-      if: always()                     # Upload even if run fails
-      uses: actions/upload-artifact@v4
-      with:
-        name: seleniumbase-screenshots-and-logs
-        path: |
-          ./latest_logs/
-          *.png
-          *.log
-        retention-days: 7
+
